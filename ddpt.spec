@@ -1,16 +1,19 @@
 Summary:	A variant of the standard Unix command dd
 Summary(pl.UTF-8):	Alternatywna implementacja standardowej uniksowej komendy dd
 Name:		ddpt
-Version:	0.92
+Version:	0.94
 Release:	1
 License:	BSD
 Group:		Applications/System
-Source0:	http://sg.danny.cz/sg/p/%{name}-%{version}.tar.bz2
-# Source0-md5:	4224a31bd3e6903d3371ebe7fdd46938
+Source0:	http://sg.danny.cz/sg/p/%{name}-%{version}.tar.xz
+# Source0-md5:	34d9d7fcb1c1044e761c556b017b6ddc
 URL:		http://sg.danny.cz/sg/ddpt.html
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
-BuildRequires:	sg3_utils-devel >= 1.26
+BuildRequires:	sg3_utils-devel >= 1.38
+BuildRequires:	tar >= 1:1.22
+BuildRequires:	xz
+Requires:	sg3_utils >= 1.38
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -75,4 +78,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS COPYING CREDITS ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/ddpt
+%attr(755,root,root) %{_bindir}/ddptctl
 %{_mandir}/man8/ddpt.8*
+%{_mandir}/man8/ddptctl.8*
