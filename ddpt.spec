@@ -1,12 +1,12 @@
 Summary:	A variant of the standard Unix command dd
 Summary(pl.UTF-8):	Alternatywna implementacja standardowej uniksowej komendy dd
 Name:		ddpt
-Version:	0.96
-Release:	3
+Version:	0.97
+Release:	1
 License:	BSD
 Group:		Applications/System
 Source0:	http://sg.danny.cz/sg/p/%{name}-%{version}.tar.xz
-# Source0-md5:	4166b452421276d2a9b3d9071d4df7ad
+# Source0-md5:	5217a3a2f316b8d1e5ea6e4645cd8ec6
 URL:		http://sg.danny.cz/sg/ddpt.html
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
